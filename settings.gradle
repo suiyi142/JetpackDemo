@@ -1,0 +1,3 @@
+include ':ThreadDemo'
+include ':LifecycleDemo'
+rootProject.name = "My JetpackDemo"
