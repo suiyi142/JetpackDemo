@@ -36,7 +36,7 @@ public class MyLifecycle implements LifecycleObserver {
     private void resume(){
         Log.d(TAG, "resume: ");
     }
-    
+
     @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
     private void pause(){
         Log.d(TAG, "pause: ");
@@ -55,5 +55,9 @@ public class MyLifecycle implements LifecycleObserver {
     @OnLifecycleEvent(Lifecycle.Event.ON_ANY)
     private void anyState(){
         Log.d(TAG, "anyState: "+lifecycle.getCurrentState());
+
+        if (lifecycle.getCurrentState().isAtLeast(Lifecycle.State.STARTED)){
+            Log.d(TAG, "anyState: 当前已经start了");
+        }
     }
 }
