@@ -1,3 +1,4 @@
+include ':DataBindingDemo'
 include ':ThreadDemo'
 include ':LifecycleDemo'
 rootProject.name = "JetpackDemo"
