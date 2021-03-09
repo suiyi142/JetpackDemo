@@ -20,6 +20,9 @@ public class UserData {
     static ObservableField<String> name;
     static ObservableField<Integer> age;
 
+    public UserData() {
+    }
+
     public UserData(ObservableField<String> name, ObservableField<Integer> age) {
         this.name = name;
         this.age = age;
