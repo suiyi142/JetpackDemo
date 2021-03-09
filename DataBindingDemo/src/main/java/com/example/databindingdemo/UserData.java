@@ -1,5 +1,6 @@
 package com.example.databindingdemo;
 
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
@@ -45,6 +46,13 @@ public class UserData {
 //        Log.d(TAG, "contentChangeListener: newAge = " + newAge);
 //        name.set(newAge);
 //    }
+
+    public void click(){
+        Log.d(TAG, "click() called");
+        Intent intent = new Intent(App.context,MainActivity2.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        App.context.startActivity(intent);
+    }
 
 
     @Override
