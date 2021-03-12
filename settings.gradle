@@ -1,3 +1,4 @@
+include ':LiveDataDemo'
 include ':DataBindingDemo'
 include ':ThreadDemo'
 include ':LifecycleDemo'
