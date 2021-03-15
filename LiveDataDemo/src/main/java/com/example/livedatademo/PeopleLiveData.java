@@ -14,7 +14,7 @@ import androidx.lifecycle.LiveData;
  */
 public class PeopleLiveData extends LiveData<PeopleBean> {
     private static final String TAG = "PeopleLiveData";
-    private PeopleBean peopleBean;
+    private final PeopleBean peopleBean;
     private boolean isRun = false;
 
     public PeopleLiveData(PeopleBean peopleBean) {
@@ -33,13 +33,17 @@ public class PeopleLiveData extends LiveData<PeopleBean> {
     protected void onInactive() {
         Log.d(TAG, "onInactive() called");
         super.onInactive();
+        isRun = false;
     }
 
-    private Runnable runnable = new Runnable() {
+    private final Runnable runnable = new Runnable() {
         @Override
         public void run() {
-            while (isRun){
-                peopleBean.setAge(peopleBean.getAge()+1);
+            while (isRun) {
+                peopleBean.setAge(peopleBean.getAge() + 1);
+                postValue(peopleBean);
+//                setValue(peopleBean);//主线程才能用
+                Log.d(TAG, "run() called peopleBean.getAge() = " + peopleBean.getAge());
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {

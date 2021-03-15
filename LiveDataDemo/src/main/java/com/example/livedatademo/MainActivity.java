@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate() called with: savedInstanceState = [" + savedInstanceState + "]");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         TextView tv = findViewById(R.id.tv);
@@ -27,5 +28,11 @@ public class MainActivity extends AppCompatActivity {
                 tv.setText("name = " + peopleBean.getName() + " age = " + peopleBean.getAge());
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        Log.d(TAG, "onDestroy() called");
+        super.onDestroy();
     }
 }
