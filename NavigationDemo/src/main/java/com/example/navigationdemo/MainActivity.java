@@ -27,7 +27,10 @@ public class MainActivity extends AppCompatActivity {
                 Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.action_defaultFragment_to_oneFragment);
                 break;
             case R.id.bt_2:
-                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.action_oneFragment_to_twoFragment);
+//                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.action_oneFragment_to_twoFragment);
+//                改为谷歌推荐的安全传参
+                Bundle bundle1 = new TwoFragmentArgs.Builder().setAge(12).setName("张三李四王二麻子").build().toBundle();
+                Navigation.findNavController(this, R.id.nav_host_fragment).navigate(R.id.action_oneFragment_to_twoFragment, bundle1);
                 break;
             case R.id.bt_3:
                 //带参数的

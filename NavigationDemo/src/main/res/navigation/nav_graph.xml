@@ -37,13 +37,23 @@
         <action
             android:id="@+id/action_twoFragment_to_threeFragment"
             app:destination="@id/threeFragment" />
+
+        <!-- 参数-->
+        <argument
+            android:name="name"
+            android:defaultValue="none"
+            app:argType="string" />
+        <argument
+            android:name="age"
+            android:defaultValue="0"
+            app:argType="integer" />
     </fragment>
 
     <fragment
         android:id="@+id/threeFragment"
         android:name="com.example.navigationdemo.ThreeFragment"
         android:label="ThreeFragment"
-        tools:layout="@layout/fragment_three" >
+        tools:layout="@layout/fragment_three">
         <action
             android:id="@+id/action_threeFragment_to_defaultFragment"
             app:destination="@id/defaultFragment" />
