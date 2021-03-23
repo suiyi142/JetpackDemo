@@ -1,3 +1,4 @@
+include ':RoomDemo'
 include ':NavigationDemo'
 include ':LiveDataDemo'
 include ':DataBindingDemo'

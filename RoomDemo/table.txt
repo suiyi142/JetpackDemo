@@ -1,0 +1,3 @@
+表名：user_table
+
+列：int id; String name; int age;
