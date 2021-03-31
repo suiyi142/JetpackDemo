@@ -12,7 +12,11 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/DataBindingDemo" />
             <option value="$PROJECT_DIR$/LifecycleDemo" />
+            <option value="$PROJECT_DIR$/LiveDataDemo" />
+            <option value="$PROJECT_DIR$/NavigationDemo" />
+            <option value="$PROJECT_DIR$/RoomDemo" />
             <option value="$PROJECT_DIR$/threaddemo" />
           </set>
         </option>
